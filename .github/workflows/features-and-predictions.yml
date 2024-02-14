@@ -15,12 +15,13 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8.10'
+          python-version: '3.8.1'
           
       - name: install python packages
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install --upgrade pip ipython ipykernel
           
       - name: execute python workflows from bash script
         env: 
